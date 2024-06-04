@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowUnreachableCode": false,
+    "baseUrl": ".",
+    "paths": {
+      "@/server/*": ["./src/server/*"],
+      "@/client/*": ["./src/client/*"]
+    },
+    "downlevelIteration": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react",
+    "lib": ["es6", "es2015", "es2017", "dom", "ES2020"],
+    "module": "esnext",
+    "moduleResolution": "Node",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": false,
+    "pretty": true,
+    "sourceMap": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "ignoreDeprecations": "5.0",
+    "target": "es2016",
+    "typeRoots": ["node_modules/@types", "typings"],
+    "types": ["react", "jest", "node"],
+    "outDir": "./public",
+    "skipLibCheck": true
+  },
+  "exclude": [
+    "dist",
+    "webpack",
+    "jest",
+    "svg"
+  ]
+}
