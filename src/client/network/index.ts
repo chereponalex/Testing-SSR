@@ -1,5 +1,6 @@
 import Axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from "axios";
 import { sessionToken } from "../utils/cookie";
+import { logout } from "../utils/logout";
 
 const axios = Axios.create();
 
@@ -14,7 +15,7 @@ axios.interceptors.request.use((config) => {
 
 axios.interceptors.response.use(undefined, (error: AxiosError) => {
   if (error.response?.status === 401) {
-    window.location.replace("/login");
+    logout();
   }
   return Promise.reject(error);
 });
